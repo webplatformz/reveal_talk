@@ -74,7 +74,6 @@ var drawHeaderForPrinting = function () {
 
     var zuehlkeSlidesWithTitle = document.querySelectorAll('[data-title]');
     for (var i = 0; i < zuehlkeSlidesWithTitle.length; i++) {
-        console.log('print header...' + zuehlkeSlidesWithTitle.length);
         var slideTitle = zuehlkeSlidesWithTitle[i].getAttribute("data-title");
         var printHeader = document.getElementById("zuehlke-header").cloneNode(true);
         printHeader.setAttribute('id', '');

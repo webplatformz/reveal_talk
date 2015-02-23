@@ -478,6 +478,10 @@ div.overview #zuehlke-header {
 
 }
 
+.reveal pre{
+    box-shadow: none !important;
+}
+
 span.zuehlke-header {
 
     text-transform: uppercase;
@@ -523,6 +527,8 @@ span.zuehlke-header {
     font-weight: bold;
 
     letter-spacing: 0.15em;
+    
+    box-sizing: content-box;
 
 }
 

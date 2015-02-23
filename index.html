@@ -54,7 +54,7 @@
 
 <body>
 
-    <div class="reveal">
+    <div ng-app="reveal" class="reveal">
 
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
@@ -211,6 +211,52 @@
                             </md-button>
                             <div class="gap"></div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section data-title="Pretty Cool" class='left'>
+                <h2>Angular Material Examples</h2>
+                <div ng-controller="tabCtrl" layout-align="center center" style="min-height: 300px;">
+                       <md-tabs md-selected="selectedIndex" flex>
+    <md-tab ng-repeat="tab in tabs"
+            ng-disabled="tab.disabled"
+            label="{{tab.title}}">
+    <div class="demo-tab tab{{$index%4}}" layout="column" layout-align="space-around center">
+        <div ng-bind="tab.content"></div>
+          <md-button class="md-primary md-raised" ng-click="removeTab( tab )">
+            Remove Tab
+          </md-button>
+      </div>
+    </md-tab>
+  </md-tabs>
+                </div>
+            </section>
+     <section data-title="Pretty Cool" class='left'>
+                <h2>Angular Material Examples</h2>
+                <div ng-controller="revealCtrl" layout-align="center center" style="min-height: 300px;">
+                        <h3>
+                      RGB <span ng-attr-style="border: 1px solid #333; background: rgb({{color.red}},{{color.green}},{{color.blue}})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </h3>
+                    <div layout>
+                      <div fex="10" layout layout-align="center center">
+                        <span>R</span>
+                      </div>
+                      <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
+                      </md-slider>
+                    </div>
+                    <div layout>
+                      <div flx="10" layout layout-align="center center">
+                        <span>G</span>
+                      </div>
+                      <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent">
+                      </md-slider>
+                    </div>
+                    <div layout>
+                      <div flx="10" layout layout-align="center center">
+                        <span>B</span>
+                      </div>
+                      <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-primary">
+                        </md-slider>
                     </div>
                 </div>
             </section>

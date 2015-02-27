@@ -66,7 +66,12 @@
                     <div style="margin-top: 10px; font-size: 0.6em">Isabel Züger &amp; Ben Millo</div>
                 </div>
             </section>
-
+            <section>
+                <div class="zuehlke-center">
+                    <h1>Ursprung</h1>
+                    <div class="zuehlke-splash-title"><a href="http://lab.hakim.se/reveal-js/#/" target="_blank">hakim.se</a></div>
+                </div>
+            </section>
             <section data-state='orange'>
                 <div class="zuehlke-center">
                     <div class="zuehlke-splash-title">Splash page to start a chapter</div>
@@ -103,7 +108,7 @@
             <section>
                 <h2>Print your presentation</h2>
                 <p>This is easy: use the suffix
-                    <a href="?print-pdf">?print-pdf</a>&nbsp;in the address bar to enter print mode</p>
+                    <a target="_blank" href="?print-pdf">?print-pdf</a>&nbsp;in the address bar to enter print mode</p>
             </section>
 
             <section data-title="Simple Page with speaker notes">
@@ -214,23 +219,6 @@
                     </div>
                 </div>
             </section>
-            <section data-title="Pretty Cool" class='left'>
-                <h2>Angular Material Examples</h2>
-                <div ng-controller="tabCtrl" layout-align="center center" style="min-height: 300px;">
-                       <md-tabs md-selected="selectedIndex" flex>
-    <md-tab ng-repeat="tab in tabs"
-            ng-disabled="tab.disabled"
-            label="{{tab.title}}">
-    <div class="demo-tab tab{{$index%4}}" layout="column" layout-align="space-around center">
-        <div ng-bind="tab.content"></div>
-          <md-button class="md-primary md-raised" ng-click="removeTab( tab )">
-            Remove Tab
-          </md-button>
-      </div>
-    </md-tab>
-  </md-tabs>
-                </div>
-            </section>
      <section data-title="Pretty Cool" class='left'>
                 <h2>Angular Material Examples</h2>
                 <div ng-controller="revealCtrl" layout-align="center center" style="min-height: 300px;">
@@ -258,6 +246,23 @@
                       <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-primary">
                         </md-slider>
                     </div>
+                </div>
+            </section>
+    <section data-title="Pretty Cool" class='left'>
+                <h2>Angular Material Examples</h2>
+                <div ng-controller="tabCtrl" layout-align="center center" style="min-height: 300px;">
+                       <md-tabs md-selected="selectedIndex" flex>
+    <md-tab ng-repeat="tab in tabs"
+            ng-disabled="tab.disabled"
+            label="{{tab.title}}">
+    <div class="demo-tab tab{{$index%4}}" layout="column" layout-align="space-around center">
+        <div ng-bind="tab.content"></div>
+          <md-button class="md-primary md-raised" ng-click="removeTab( tab )">
+            Remove Tab
+          </md-button>
+      </div>
+    </md-tab>
+  </md-tabs>
                 </div>
             </section>
             <section data-transition="linear" data-state="zuehlke-bg-parallax" data-parallax-step=0>
